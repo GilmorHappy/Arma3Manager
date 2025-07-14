@@ -1,0 +1,11 @@
+# Example configuration for arma3_manager.py
+server_path: /opt/arma3
+server_config_path: /opt/arma3/server.cfg
+server_config: |
+  // Example server.cfg
+  hostname = "My Arma 3 Server";
+  password = "";
+  maxPlayers = 32;
+mods:
+  - 450814997
+  - 463939057
