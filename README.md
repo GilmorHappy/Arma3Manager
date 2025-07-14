@@ -6,6 +6,7 @@ This repository contains a simple Python based manager for the Arma 3 dedicated 
 
 - Python 3
 - `steamcmd` installed and available in your `PATH`
+- Install Python dependencies with `pip install -r requirements.txt`
 - (Optional) `STEAM_USERNAME` and `STEAM_PASSWORD` environment variables for downloading mods from the Workshop
 
 ## Configuration
