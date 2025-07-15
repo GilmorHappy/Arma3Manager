@@ -47,6 +47,10 @@ python3 arma3_manager.py apply-config      # write server.cfg as configured
 python3 arma3_manager.py all               # perform all actions above
 ```
 
+When calling `steamcmd` manually, always specify `+force_install_dir` *before*
+the `+login` argument. Otherwise SteamCMD will emit "Please use force_install_dir
+before logon!" and refuse to install the server.
+
 To download mods you must set the `STEAM_USERNAME` and `STEAM_PASSWORD` environment variables to a Steam account that owns Arma 3 and is subscribed to the desired mods.
 
 You can automate updates by running the script periodically with `cron` or a systemd timer.

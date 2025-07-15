@@ -12,7 +12,13 @@ def run_command(command):
 
 def update_server(cfg):
     server_path = cfg.get('server_path', '/opt/arma3')
-    cmd = f"steamcmd +login anonymous +force_install_dir {server_path} +app_update 233780 validate +quit"
+    # force_install_dir must be specified before login or SteamCMD will refuse
+    # to install the app. See the SteamCMD error "Please use force_install_dir
+    # before logon!" if the order is incorrect.
+    cmd = (
+        f"steamcmd +force_install_dir {server_path} "
+        f"+login anonymous +app_update 233780 validate +quit"
+    )
     return run_command(cmd)
 
 
