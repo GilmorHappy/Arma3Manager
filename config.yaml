@@ -1,5 +1,6 @@
 # Example configuration for arma3_manager.py
 server_path: /opt/arma3
+# server_config_path defaults to <server_path>/server.cfg if not set
 server_config_path: /opt/arma3/server.cfg
 server_config: |
   // Example server.cfg

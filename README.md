@@ -11,7 +11,8 @@ This repository contains a simple Python based manager for the Arma 3 dedicated 
 
 ## Configuration
 
-Modify `config.yaml` to match your setup:
+Modify `config.yaml` to match your setup. `server_config_path` will default to
+`<server_path>/server.cfg` if not explicitly set:
 
 ```yaml
 server_path: /opt/arma3            # Where to install the server
