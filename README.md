@@ -9,6 +9,14 @@ This repository contains a simple Python based manager for the Arma 3 dedicated 
 - Install Python dependencies with `pip install -r requirements.txt`
 - (Optional) `STEAM_USERNAME` and `STEAM_PASSWORD` environment variables for downloading mods from the Workshop
 
+## Setup
+
+Run the `setup.sh` script to install SteamCMD and the Python requirements. The script requires sudo privileges on Debian/Ubuntu based systems:
+
+```bash
+./setup.sh
+```
+
 ## Configuration
 
 Modify `config.yaml` to match your setup. `server_config_path` will default to
