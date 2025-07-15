@@ -35,15 +35,18 @@ def download_mods(cfg):
 
 
 def apply_config(cfg):
-    config_file = cfg.get('server_config_path')
+    server_path = cfg.get('server_path', '/opt/arma3')
+    config_file = cfg.get('server_config_path', os.path.join(server_path, 'server.cfg'))
     config_content = cfg.get('server_config')
-    if config_file and config_content:
-        with open(config_file, 'w') as f:
-            f.write(config_content)
-        print(f"Wrote server config to {config_file}")
-        return True
-    print('No server_config_path or server_config provided in config')
-    return False
+    if not config_content:
+        print('No server_config provided in config')
+        return False
+
+    os.makedirs(os.path.dirname(config_file), exist_ok=True)
+    with open(config_file, 'w') as f:
+        f.write(config_content)
+    print(f"Wrote server config to {config_file}")
+    return True
 
 
 if __name__ == '__main__':
